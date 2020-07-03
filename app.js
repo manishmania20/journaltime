@@ -11,7 +11,7 @@ const app = express()
 //MongoDB Atlas & Mongoose
 const dbURI = 'mongodb+srv://manish:Starwhite654@journaltime.k8ufs.mongodb.net/JournalTime?retryWrites=true&w=majority'
 mongoose.connect(dbURI, { useNewUrlParser: true , useUnifiedTopology: true })
-    .then((result) =>  app.listen(3000))
+    .then((result) =>  app.listen(process.env.PORT || 3000))
     .catch((error) => console.log(error))
  
 //view engine
