@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/header.ejs') %>
+<body>
+    <%- include('../partials/nav.ejs') %>
+
+    <h2>Past Journals</h2>
+    <div class="all-journal">
+
+        <% if (journals.length > 0) { %>
+            <% journals.forEach( journal => { %>
+                <a href="/journals/<%= journal._id %>" class="single">
+                <h3 class="title"><%= journal.title %></h3>
+                <p class="date"><%= journal.date %></p>   
+                </a>      
+            <% }) %>
+        <% } else { %>
+            <p>No journals to display</p>
+        <% } %> 
+    </div>
+
+<%- include('../partials/footer.ejs') %>
+</body>
+</html>

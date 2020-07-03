@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/header.ejs') %>
+<body>
+    <%- include('../partials/nav.ejs') %>
+
+    <div class="details content">
+        <h3><%= journal.title %></h3>
+        <div class="content">
+            <p><%= journal.body %></p>
+        <a class="delete" data-doc="<%= journal._id %>">
+          <img src="/trashcan.svg" alt="delete button">
+        </a>
+        </div>
+    </div>
+
+    <script>
+        const trashcan = document.querySelector('a.delete');
+        trashcan.addEventListener('click', (e) => {
+          const endpoint = `/journals/${trashcan.dataset.doc}`;
+          fetch(endpoint, {
+            method: 'DELETE',
+          })
+          .then(response => response.json())
+          .then(data => window.location.href = data.redirect)
+          .catch(err => console.log(err));
+        });
+        
+      </script>
+    <%- include('../partials/footer.ejs') %>
+
+</body>
+</html>
