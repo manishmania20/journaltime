@@ -7,11 +7,12 @@ const basicRoutes = require('./routes/basicRoutes.js')
 //creating the express app
 
 const app = express()
+const PORT = process.env.PORT || 8080
 
 //MongoDB Atlas & Mongoose
 const dbURI = 'mongodb+srv://manish:Starwhite654@journaltime.k8ufs.mongodb.net/JournalTime?retryWrites=true&w=majority'
 mongoose.connect(dbURI, { useNewUrlParser: true , useUnifiedTopology: true })
-    .then((result) =>  app.listen(process.env.PORT || 3000))
+    .then((result) =>  app.listen(PORT))
     .catch((error) => console.log(error))
  
 //view engine
