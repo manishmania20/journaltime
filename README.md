@@ -47,5 +47,22 @@ app.METHOD(PATH, HANDLER)
 * Use __<%- tag %> to specify EJS which uses referencing to commonly used pages to make code more understandable and save time for the developer like header and footer will be common for all the main routes.
 * The partials folder contains all the commonly used pages like header, navbar and footer. 
 * You may add your contact, error and any other page in the views folder.
-![picture alt](https://images.app.goo.gl/E4dd6RQwXmWEeKaV6)
-  
+
+## App.js ##
+* The app.js file is the one which executes first and uses the npm packages like mongoose, morgan, etc.
+* Express is used to create the app.
+* For defining the port one can use any port of his choice(3000,8080,etc) and __process.env.PORT__ is used for deploying to Heroku.
+* Every MongoDb Atlas cloud database has its own dbURI as an access token
+* Morgan is used for logging the browser connection details like process type, latency, etc.
+* 404 error page is used for displaying wrong route error. 
+
+## Running the software ##
+* To run the API in local machine use __nodemon app__
+* To run it on Heroku live server or gh pages use __node app.js__
+
+## Software and packages used ##
+* NodeJs
+* MongoDb Atlas
+* Express
+* Ejs
+* Mongoose
