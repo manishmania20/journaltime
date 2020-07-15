@@ -16,18 +16,18 @@ A handy journal editor to create and delete journals on the go and add multiple 
    res.body()}
   1. The function journal_home handles the requests and responses and consists of two parameters req and res and inside the body is how to render the view.
 
- 2. .then((result) => {
+  2. .then((result) => {
            res.render('journals/home', {title: 'My journals', journals: result})
        })
        .catch((error) => {
            console.log(error)
 __result__ object displays journals and the route is directed to 'journals/home' and error if any, is console logged in the terminal by using the __then-catch__ method.
 
- 3. __findById__ and __findByIdAndDelete__ 
+  3. __findById__ and __findByIdAndDelete__ 
 functions use the id to find a single document from the list of other documents.
 
 ### Routes ###
-1. The routes present in the __routes/basicRoutes.js__ follows the basic function
+ The routes present in the __routes/basicRoutes.js__ follows the basic function
 
 app.METHOD(PATH, HANDLER)
 
@@ -47,6 +47,5 @@ app.METHOD(PATH, HANDLER)
 * Use __<%- tag %> to specify EJS which uses referencing to commonly used pages to make code more understandable and save time for the developer like header and footer will be common for all the main routes.
 * The partials folder contains all the commonly used pages like header, navbar and footer. 
 * You may add your contact, error and any other page in the views folder.
-![!picture alt]( https://en.m.wikipedia.org/wiki/File:MVC-Process.svg)
-
+![picture alt](https://images.app.goo.gl/E4dd6RQwXmWEeKaV6)
   
