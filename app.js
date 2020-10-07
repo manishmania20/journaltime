@@ -3,11 +3,10 @@ const morgan = require('morgan')
 const mongoose = require('mongoose')
 const basicRoutes = require('./routes/basicRoutes.js')
 
-
 //creating the express app
 
 const app = express()
-const PORT = process.env.PORT || 8080
+const PORT = 3000
 
 //MongoDB Atlas & Mongoose
 const dbURI = 'mongodb+srv://manish:Starwhite654@journaltime.k8ufs.mongodb.net/JournalTime?retryWrites=true&w=majority'

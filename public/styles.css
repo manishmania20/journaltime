@@ -4,12 +4,11 @@ box-sizing: border-box;
 }
 body{
 background: rgb(100, 96, 96) url('natural-goods-berlin-KhUIvD_z3Hw-unsplash.jpg') no-repeat center/cover;
-height: 450px;
+background-attachment: fixed;
+height: 100%;
 font-family: Roboto;
-overflow: hidden;
 margin: 0;
 }
-
 p,h1,h2,h3,a,ul{
 margin: 0;
 padding: 0;
@@ -54,6 +53,7 @@ footer{
 
 h2{
   margin-bottom: 40px;
+  text-align: center;
 }
 
 h3{
@@ -61,15 +61,25 @@ h3{
   margin-bottom: 8px;
 }
 
+
 .all-journal a{
   display: block;
-  margin: 40px 0;
+  background: white;
+  border-radius: 10px;
   padding-left: 30px;
+  width: 490px;
+  margin: 40px auto;
+  list-style: none;
   border-left: 6px solid darkgreen;
+  transition: 1s;
+}
+
+.all-journal a:hover{
+  transform:scale(1.1)
 }
 
 .all-journal a:hover h3{
-  color: darkgreen
+  color: darkgreen;
 }
 
 .details{
