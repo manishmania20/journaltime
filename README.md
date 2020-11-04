@@ -1,6 +1,7 @@
 # JournalTime #
 ## NodeJS RESTful API using Express ##
-A handy journal editor to create and delete journals on the go and add multiple routes on your own to accommodate other features.
+A handy journal editor to create and delete journals on the go and add multiple routes on your own to accommodate other features. 
+URL : <https://journaltime.herokuapp.com>
 
 ## Installation ##
 * Clone the repository to local machine using __git clone__
